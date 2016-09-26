@@ -28,11 +28,12 @@ form {
 #pizzaSize {
   font-weight: 800;
 }
-
+/*use will-change to move the moving pizza elements to their own compositor layer in order to apply transform efficiently*/
 .mover {
   position: fixed;
   width: 256px;
   z-index: -1;
+  will-change: transform;
 }
 
 .randomPizzaContainer {
